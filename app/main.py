@@ -67,7 +67,7 @@ def generar_pdf(cliente, total, ventanas):
 
     pdf_dir = r"C:\Users\AKBAR\Desktop\cotizaciones_ventanas"  
     pdf_file_path = os.path.join(pdf_dir, f"{cliente.nombre}_cotizacion.pdf")
-    pdf.output(pdf_file_path)
+    pdf.output(pdf_file_path, 'F')
 
     return pdf_file_path
 
@@ -97,7 +97,7 @@ def enviar_correo():
     
     msg.charset = 'utf-8'
 
-    with app.open_resource(pdf_file_path) as pdf:
+    with open(pdf_file_path, 'rb') as pdf:
         msg.attach(os.path.basename(pdf_file_path), "application/pdf", pdf.read())
 
     mail.send(msg)
