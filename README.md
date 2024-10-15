@@ -21,5 +21,5 @@ Esta es una aplicación Flask que permite a los usuarios solicitar cotizaciones 
 1. Clona este repositorio:
 
    ```bash
-   git clone <URL del repositorio>
-   cd <nombre del repositorio>
+   git clone <[URL del repositorio](https://github.com/I-AKBAR-I/Proyecto_Cotizacion.git)>
+   cd <Proyecto_Cotizacion.git>
