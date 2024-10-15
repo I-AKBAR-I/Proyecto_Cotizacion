@@ -38,6 +38,21 @@
         <input type="email" name="email" required><br><br>
         <button type="submit">Enviar Cotización</button>
     </form>
+
+    <h3>Generar PDF</h3>
+    <form action="{{ url_for('generar_pdf_route') }}" method="POST">
+        <input type="hidden" name="nombre" value="{{ cliente.nombre }}">
+        <input type="hidden" name="empresa" value="{{ cliente.empresa }}">
+        <input type="hidden" name="cantidad_ventanas" value="{{ cliente.cantidad_ventanas }}">
+        <input type="hidden" name="estilo" value="{{ ventanas[0].estilo }}">
+        <input type="hidden" name="ancho" value="{{ ventanas[0].ancho }}">
+        <input type="hidden" name="alto" value="{{ ventanas[0].alto }}">
+        <input type="hidden" name="acabado" value="{{ ventanas[0].acabado }}">
+        <input type="hidden" name="tipo_vidrio" value="{{ ventanas[0].tipo_vidrio }}">
+        <input type="hidden" name="esmerilado" value="{{ 'on' if ventanas[0].esmerilado else 'off' }}">
+        <button type="submit">Generar PDF</button>
+    </form>
 </body>
 </html>
+
 
