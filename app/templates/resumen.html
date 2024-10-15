@@ -8,19 +8,22 @@
 </head>
 <body>
     <h1>Resumen de Cotización</h1>
-    <h2>Cliente: {{ cliente.nombre }}</h2>
-    <h2>Empresa: {{ cliente.empresa }}</h2>
-    <h3>Cantidad de ventanas: {{ cliente.cantidad_ventanas }}</h3>
+    
+    <div class="recuadro">
+        <h2>Cliente: {{ cliente.nombre }}</h2>
+        <h2>Empresa: {{ cliente.empresa }}</h2>
+        <h3>Cantidad de ventanas: {{ cliente.cantidad_ventanas }}</h3>
 
-    <h2>Detalles de las Ventanas (Aplicados globalmente)</h2>
-    <p><strong>Estilo:</strong> {{ ventanas[0].estilo }}</p>
-    <p><strong>Ancho:</strong> {{ ventanas[0].ancho }} cm</p>
-    <p><strong>Alto:</strong> {{ ventanas[0].alto }} cm</p>
-    <p><strong>Acabado:</strong> {{ ventanas[0].acabado }}</p>
-    <p><strong>Tipo de Vidrio:</strong> {{ ventanas[0].tipo_vidrio }}</p>
-    <p><strong>Esmerilado:</strong> {{ 'Sí' if ventanas[0].esmerilado else 'No' }}</p>
+        <h2>Detalles de las Ventanas </h2>
+        <p><strong>Estilo:</strong> {{ ventanas[0].estilo }}</p>
+        <p><strong>Ancho:</strong> {{ ventanas[0].ancho }} cm</p>
+        <p><strong>Alto:</strong> {{ ventanas[0].alto }} cm</p>
+        <p><strong>Acabado:</strong> {{ ventanas[0].acabado }}</p>
+        <p><strong>Tipo de Vidrio:</strong> {{ ventanas[0].tipo_vidrio }}</p>
+        <p><strong>Esmerilado:</strong> {{ 'Sí' if ventanas[0].esmerilado else 'No' }}</p>
 
-    <h2>Total: ${{ total }}</h2>
+        <h2>Total: ${{ total }}</h2>
+    </div>
 
     <h3>Enviar Cotización por Correo</h3>
     <form action="{{ url_for('enviar_correo') }}" method="POST">
