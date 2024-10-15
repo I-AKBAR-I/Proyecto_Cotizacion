@@ -1,37 +1,45 @@
-/* Container for the image and button */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
 .container {
-  position: relative;
-  width: 100%; /* adjust the width to your needs */
-  height: 300px; /* adjust the height to your needs */
-}
-
-/* Style for the image */
-.imagen {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Style for the button container */
-.boton-crear-cotizacion {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-/* Style for the button itself */
-.boton-crear-cotizacion a {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+h1 {
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Hover effect for the button */
-.boton-crear-cotizacion a:hover {
-  background-color: #3e8e41;
+.imagen {
+  width: 100%; /* La imagen se adapta al ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  margin-bottom: 20px; /* Espacio debajo de la imagen */
 }
+
+.boton-crear-cotizacion {
+  margin-top: 10px; /* Espacio arriba del botón */
+}
+
+.boton-crear-cotizacion a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Color del botón */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 5px; /* Bordes redondeados del botón */
+  transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.boton-crear-cotizacion a:hover {
+  background-color: #0056b3; /* Color del botón al pasar el ratón */
+}
+
