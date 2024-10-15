@@ -56,7 +56,7 @@ def generar_pdf(cliente, total, ventanas):
     pdf.cell(200, 10, txt=f"Empresa: {cliente.empresa}", ln=True)
     pdf.cell(200, 10, txt=f"Cantidad de ventanas: {cliente.cantidad_ventanas}", ln=True)
 
-    pdf.cell(200, 10, txt="Detalles de las Ventanas (Aplicados globalmente):", ln=True)
+    pdf.cell(200, 10, txt="Detalles de las Ventanas :", ln=True)
     pdf.cell(200, 10, txt=f"Estilo: {ventanas[0].estilo}", ln=True)
     pdf.cell(200, 10, txt=f"Ancho: {ventanas[0].ancho} cm", ln=True)
     pdf.cell(200, 10, txt=f"Alto: {ventanas[0].alto} cm", ln=True)
