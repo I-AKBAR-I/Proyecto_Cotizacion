@@ -24,4 +24,4 @@ Esta es una aplicación Flask que permite a los usuarios solicitar cotizaciones 
    git clone <[URL del repositorio](https://github.com/I-AKBAR-I/Proyecto_Cotizacion.git)>
    cd <Proyecto_Cotizacion.git>
 2. Cambie la ruta donde se genera el pdf en may.py
-    pdf_dir = r"C:\Users\AKBAR\Desktop\cotizaciones_ventanas" 
+    ** pdf_dir = r"C:\Users\AKBAR\Desktop\cotizaciones_ventanas" 
