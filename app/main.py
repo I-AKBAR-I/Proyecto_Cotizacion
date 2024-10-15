@@ -49,8 +49,7 @@ def cotizacion():
 def generar_pdf(cliente, total, ventanas):
     pdf = FPDF()
     pdf.add_page()
-    pdf.add_font('Arial', 'B', 'C:\Windows\Fonts\Arial', uni=True) 
-    pdf.set_font("Arial", size=12)
+    pdf.set_font("Helvetica", size=12)
 
     pdf.cell(200, 10, txt="Resumen de Cotización", ln=True, align='C')
     pdf.cell(200, 10, txt=f"Cliente: {cliente.nombre}", ln=True)
